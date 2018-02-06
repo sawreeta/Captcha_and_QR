@@ -4,6 +4,7 @@
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>css/style.css">
         <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans+Condensed:300|Raleway' rel='stylesheet' type='text/css'>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <script type="text/javascript">
         
             // Ajax post for refresh captcha image.
@@ -80,6 +81,10 @@
                     echo form_input($data_captcha);
                     ?>
                     </div>
+			 <div class="form-group" align="center" style="margin-left: 85px;font-weight: bold;">
+                    	<div class="g-recaptcha" data-sitekey="6LdLgEMUAAAAAOvYeOya6KXpqKddB0RVncsodGsl" ></div>
+                     	<span class="msg-error error"></span>
+                  </div>
                     <div id="form_button">
                    	 <?php echo form_submit('submit', 'Submit', "class='submit'"); ?>
                     </div>
